@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FE5B26B-B074-47F6-8AFE-5322E1D86721}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Three.Net</RootNamespace>
+    <AssemblyName>Three.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Pencil.Gaming">
+      <HintPath>..\lib\Pencil.Gaming\Pencil.Gaming.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cameras\Camera.cs" />
+    <Compile Include="Cameras\OrthographicCamera.cs" />
+    <Compile Include="Cameras\PerspectiveCamera.cs" />
+    <Compile Include="Core\BufferedGeometry.cs" />
+    <Compile Include="Extras\Core\Curve.cs" />
+    <Compile Include="Core\Face3.cs" />
+    <Compile Include="Core\Geometry.cs" />
+    <Compile Include="Core\Object3D.cs" />
+    <Compile Include="Core\Shape.cs" />
+    <Compile Include="Extras\Core\Curve2d.cs" />
+    <Compile Include="Extras\Core\Curve3d.cs" />
+    <Compile Include="Extras\Core\Gyroscope.cs" />
+    <Compile Include="Extras\Core\Projector.cs" />
+    <Compile Include="Extras\Core\Raycaster.cs" />
+    <Compile Include="Extras\Curves\ArcCurve.cs" />
+    <Compile Include="Extras\Curves\ClosedSplineCurve3.cs" />
+    <Compile Include="Extras\Curves\CubicBezierCurve.cs" />
+    <Compile Include="Extras\Curves\CubicBezierCurve3.cs" />
+    <Compile Include="Extras\Curves\EllipseCurve.cs" />
+    <Compile Include="Extras\Curves\LineCurve.cs" />
+    <Compile Include="Extras\Curves\LineCurve3.cs" />
+    <Compile Include="Extras\Curves\QuadraticBezierCurve.cs" />
+    <Compile Include="Extras\Curves\QuadraticBezierCurve3.cs" />
+    <Compile Include="Extras\Curves\SplineCurve.cs" />
+    <Compile Include="Extras\Curves\SplineCurve3.cs" />
+    <Compile Include="Extras\Geometries\BoxGeometry.cs" />
+    <Compile Include="Extras\Geometries\CircleGeometry.cs" />
+    <Compile Include="Extras\Geometries\CylinderGeometry.cs" />
+    <Compile Include="Extras\Geometries\IcosahedronGeometry.cs" />
+    <Compile Include="Extras\Geometries\OctahedronGeometry.cs" />
+    <Compile Include="Extras\Geometries\ParametricGeometry.cs" />
+    <Compile Include="Extras\Geometries\PlaneGeometry.cs" />
+    <Compile Include="Extras\Geometries\PolyhedronGeometry.cs" />
+    <Compile Include="Extras\Geometries\RingGeometry.cs" />
+    <Compile Include="Extras\Geometries\SphereGeometry.cs" />
+    <Compile Include="Extras\Geometries\TetrahedronGeometry.cs" />
+    <Compile Include="Extras\Geometries\TorusGeometry.cs" />
+    <Compile Include="Extras\Geometries\TorusKnotGeometry.cs" />
+    <Compile Include="Extras\Helpers\ArrowHelper.cs" />
+    <Compile Include="Extras\Helpers\AxisHelper.cs" />
+    <Compile Include="Extras\Helpers\BoundingBoxHelper.cs" />
+    <Compile Include="Extras\Helpers\BoxHelper.cs" />
+    <Compile Include="Extras\Helpers\CameraHelper.cs" />
+    <Compile Include="Extras\Helpers\PointLightHelper.cs" />
+    <Compile Include="Extras\Objects\LensFlare.cs" />
+    <Compile Include="Extras\Renderers\Plugins\DepthPassPlugin.cs" />
+    <Compile Include="Extras\Renderers\Plugins\LensFlarePlugin.cs" />
+    <Compile Include="Extras\Renderers\Plugins\ShadowMapPlugin.cs" />
+    <Compile Include="Extras\Renderers\Plugins\SpritePlugin.cs" />
+    <Compile Include="Lights\AmbientLight.cs" />
+    <Compile Include="Lights\HasShadow.cs" />
+    <Compile Include="Lights\HemisphericalLight.cs" />
+    <Compile Include="Lights\DirectionalLight.cs" />
+    <Compile Include="Lights\Light.cs" />
+    <Compile Include="Lights\HasTarget.cs" />
+    <Compile Include="Lights\OnlyShadow.cs" />
+    <Compile Include="Lights\PointLight.cs" />
+    <Compile Include="Lights\SpotLight.cs" />
+    <Compile Include="Lights\VirtualLight.cs" />
+    <Compile Include="Loaders\GeometryLoader.cs" />
+    <Compile Include="Loaders\JsonLoader.cs" />
+    <Compile Include="Loaders\Loader.cs" />
+    <Compile Include="Loaders\LoadingManager.cs" />
+    <Compile Include="Loaders\ObjMtlLoader.cs" />
+    <Compile Include="Materials\LineBasicMaterial.cs" />
+    <Compile Include="Materials\LineDashedMaterial.cs" />
+    <Compile Include="Materials\Material.cs" />
+    <Compile Include="Materials\MeshBasicMaterial.cs" />
+    <Compile Include="Materials\MeshFaceMaterial.cs" />
+    <Compile Include="Materials\MeshLambertMaterial.cs" />
+    <Compile Include="Materials\MeshPhongMaterial.cs" />
+    <Compile Include="Materials\CustomShaderMaterial.cs" />
+    <Compile Include="Materials\SpriteMaterial.cs" />
+    <Compile Include="Math\Box3.cs" />
+    <Compile Include="Math\Color.cs" />
+    <Compile Include="Math\Euler.cs" />
+    <Compile Include="Math\Frustum.cs" />
+    <Compile Include="Math\Mathf.cs" />
+    <Compile Include="Math\Matrix3.cs" />
+    <Compile Include="Math\Matrix4.cs" />
+    <Compile Include="Math\Plane.cs" />
+    <Compile Include="Math\Quaternion.cs" />
+    <Compile Include="Math\Ray.cs" />
+    <Compile Include="Math\Sphere.cs" />
+    <Compile Include="Math\Vector2.cs" />
+    <Compile Include="Math\Vector3.cs" />
+    <Compile Include="Math\Vector4.cs" />
+    <Compile Include="Objects\Bone.cs" />
+    <Compile Include="Objects\Line.cs" />
+    <Compile Include="Objects\Mesh.cs" />
+    <Compile Include="Objects\PointCloud.cs" />
+    <Compile Include="Objects\Skeleton.cs" />
+    <Compile Include="Objects\SkinnedMesh.cs" />
+    <Compile Include="Objects\Sprite.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\Enums.cs" />
+    <Compile Include="Renderers\GL4\PencilGamingWindows.cs" />
+    <Compile Include="Renderers\GL4\Renderer.cs" />
+    <Compile Include="Renderers\GL4\Program.cs" />
+    <Compile Include="Renderers\GL4\RenderTarget.cs" />
+    <Compile Include="Renderers\GL4\RenderExtensions.cs" />
+    <Compile Include="Renderers\Plugins\SpritePlugin.cs" />
+    <Compile Include="Renderers\Plugins\RenderPlugin.cs" />
+    <Compile Include="Renderers\GL4\RenderTargetCube.cs" />
+    <Compile Include="Renderers\Shaders\ShaderChunks.cs" />
+    <Compile Include="Renderers\Shaders\UniformsLib.cs" />
+    <Compile Include="Scenes\Fog.cs" />
+    <Compile Include="Scenes\FogExp2.cs" />
+    <Compile Include="Scenes\FogLinear.cs" />
+    <Compile Include="Scenes\Scene.cs" />
+    <Compile Include="Textures\CompressedTexture.cs" />
+    <Compile Include="Textures\DataTexture.cs" />
+    <Compile Include="Textures\Texture.cs" />
+    <Compile Include="Utils\LookupTable.cs" />
+    <Compile Include="Utils\Trigger.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extras\Animations\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
