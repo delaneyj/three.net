@@ -80,11 +80,8 @@ namespace Three.Net.Utils
             if (subscribedInputs.Count > 0)
             {
                 Cleanup();
-                foreach (var priorityAction in subscribedInputs)
-                {
-                    if (!removedSubscriptions.Contains(priorityAction))
-                        priorityAction.OnFire(arg);
-                }
+                foreach (var priorityAction in subscribedInputs.Where(p => !removedSubscriptions.Contains(p)))
+                    priorityAction.OnFire(arg);
                 Cleanup();
             }
         }
