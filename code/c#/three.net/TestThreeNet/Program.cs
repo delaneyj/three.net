@@ -65,10 +65,10 @@ namespace TestThreeNet
             
             //var loader = new JsonLoader();
             mediaPath = Path.Combine(mediaPath, "../../tests/");
-            var path = Path.Combine(mediaPath, "frankie.obj");
-            var fullpath = Path.GetFullPath(path);
-            Debug.Assert(File.Exists(fullpath));
-            var frankie = ObjMtlLoader.Parse(renderer, fullpath);
+            //var path = Path.Combine(mediaPath, "frankie.obj");
+            //var fullpath = Path.GetFullPath(path);
+            //Debug.Assert(File.Exists(fullpath));
+            //var frankie = ObjMtlLoader.Parse(renderer, fullpath);
             //frankie.Scale.Multiply(0.4f);
             //scene.Add(frankie);
             //var json = JObject.Parse(File.ReadAllText(fullpath));
@@ -168,16 +168,16 @@ namespace TestThreeNet
                 //offset.y -= deltaTime * 0.5f;
                 //material.DiffuseMap.Offset = offset;
 
-                var r = frankie.Rotation;
-                r.y += deltaTime;
-                frankie.Rotation = r;
+                //var r = frankie.Rotation;
+                //r.y += deltaTime;
+                //frankie.Rotation = r;
 
-                r = axisHelper.Rotation;
-                r.x = Mathf.Pi / 4;
-                r.y -= deltaTime;
-                axisHelper.Rotation = r;
+                //r = axisHelper.Rotation;
+                //r.x = Mathf.Pi / 4;
+                //r.y -= deltaTime;
+                //axisHelper.Rotation = r;
                 
-                r = cube.Rotation;
+                var r = cube.Rotation;
                 r.y -= deltaTime / 2;
                 r.x = Mathf.Sin(now / 4);
                 cube.Rotation = r;

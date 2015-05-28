@@ -83,8 +83,8 @@ namespace TestThreeNet
         };
             sceneOrtho = new Scene();
 
-            var amount = 200;
-            var radius = 500;
+            //var amount = 200;
+            //var radius = 500;
 
 
             sceneOrtho.Add(new Mesh(new SphereGeometry(100, 50, 50), new MeshBasicMaterial(renderer) { Diffuse = Color.Red}));
