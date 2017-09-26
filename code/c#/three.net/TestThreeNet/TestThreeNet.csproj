@@ -81,7 +81,7 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>xcopy $(SolutionDir)lib\Pencil.Gaming\natives64 $(TargetDir)natives64 /i /y</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(SolutionDir)lib\Pencil.Gaming\natives64" "$(TargetDir)natives64" /i /y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
